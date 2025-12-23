@@ -4,198 +4,120 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book Your Taxi | Ammanford & Neath Private Hire</title>
-<meta name="description" content="Book your Ammanford & Neath private hire taxi online. Pre-booked airport transfers with disabled access and minibus options.">
+<meta name="description" content="Book your Ammanford & Neath taxi online. Airport transfers with payment via Stripe.">
 
 <style>
-:root {
-  --primary: #0b3c5d;
-  --accent: #1faa59;
-  --light: #f5f7fa;
-  --dark: #222;
-}
-
-* { box-sizing: border-box; }
-body { margin:0; font-family:"Segoe UI", Arial, sans-serif; background: var(--light); color: var(--dark); line-height:1.6; }
-
-/* HEADER */
-header { 
-  background: linear-gradient(135deg, #0b3c5d, #092c44); 
-  color:#fff; 
-  padding:50px 20px; 
-  text-align:center; 
-  border-radius:0 0 20px 20px;
-}
+:root { --primary:#0b3c5d; --accent:#1faa59; --light:#f5f7fa; --dark:#222; }
+body { font-family:"Segoe UI", Arial, sans-serif; margin:0; background: var(--light); color: var(--dark); line-height:1.6; }
+header { background: linear-gradient(135deg, #0b3c5d, #092c44); color:#fff; padding:50px 20px; text-align:center; border-radius:0 0 20px 20px; }
 header h1 { font-size:34px; margin-bottom:10px; }
 header p { font-size:18px; opacity:0.9; }
-
-/* CONTAINER */
-.container { 
-  max-width:700px; 
-  margin:auto; 
-  padding:40px 30px; 
-  background:#fff; 
-  border-radius:12px; 
-  box-shadow:0 10px 25px rgba(0,0,0,0.08); 
-  margin-top:-40px; 
-}
-
-/* FORM */
+.container { max-width:700px; margin:auto; padding:40px 30px; background:#fff; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.08); margin-top:-40px; }
 form { display:flex; flex-direction:column; gap:20px; }
 label { font-weight:bold; display:flex; flex-direction:column; font-size:16px; }
-input, select, textarea { 
-  padding:12px; 
-  border-radius:6px; 
-  border:1px solid #ccc; 
-  font-size:16px; 
-  width:100%; 
-  margin-top:5px;
-}
+input, select, textarea { padding:12px; border-radius:6px; border:1px solid #ccc; font-size:16px; width:100%; margin-top:5px; }
 input:focus, select:focus, textarea:focus { border-color: var(--accent); outline:none; box-shadow:0 0 5px rgba(31,170,89,0.3); }
-
-button { 
-  background: var(--accent); 
-  color:#fff; 
-  padding:15px; 
-  font-size:18px; 
-  font-weight:bold; 
-  border:none; 
-  border-radius:30px; 
-  cursor:pointer; 
-  transition:background 0.3s ease, transform 0.2s ease; 
-}
-button:hover { 
-  background:#178f4b; 
-  transform: translateY(-2px);
-}
-
-/* SUCCESS MESSAGE */
-.success-message {
-  display:none;
-  background: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 16px;
-}
-
-/* FOOTER */
-footer { 
-  background: var(--primary); 
-  color:#fff; 
-  text-align:center; 
-  padding:20px; 
-  margin-top:60px; 
-  font-size:14px; 
-  border-radius:12px 12px 0 0;
-}
-
-@media (max-width:600px) {
-  header h1 { font-size:28px; }
-  .container { padding:30px 20px; }
-}
+button { background: var(--accent); color:#fff; padding:15px; font-size:18px; font-weight:bold; border:none; border-radius:30px; cursor:pointer; transition:background 0.3s ease, transform 0.2s ease; }
+button:hover { background:#178f4b; transform: translateY(-2px); }
+.success-message { display:none; background:#d4edda; color:#155724; border:1px solid #c3e6cb; padding:15px; border-radius:8px; text-align:center; margin-top:20px; font-size:16px; }
+footer { background: var(--primary); color:#fff; text-align:center; padding:20px; margin-top:60px; font-size:14px; border-radius:12px 12px 0 0; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Book Your Taxi</h1>
-  <p>Pre-booked airport transfers & specialist transport – 24/7</p>
+<h1>Book Your Taxi</h1>
+<p>Pre-booked airport transfers & specialist transport – 24/7</p>
 </header>
 
 <div class="container">
-  <form id="taxiForm" action="https://formspree.io/f/mjgbpzjj" method="POST">
-    <label for="name">Full Name
-      <input type="text" name="name" id="name" required placeholder="John Doe">
-    </label>
-
-    <label for="phone">Phone Number
-      <input type="tel" name="phone" id="phone" required placeholder="01234 567890">
-    </label>
-
-    <label for="postcode">Pickup Postcode
-      <input type="text" name="postcode" id="postcode" required placeholder="SA18 3XX">
-    </label>
-
-    <label for="airport">Select Airport
-      <select name="airport" id="airport" required>
-        <option value="">--Choose Airport--</option>
-        <option value="cardiff">Cardiff Airport</option>
-        <option value="bristol">Bristol Airport</option>
-        <option value="heathrow">Heathrow Airport</option>
-        <option value="gatwick">Gatwick Airport</option>
-        <option value="birmingham">Birmingham Airport</option>
-        <option value="manchester">Manchester Airport</option>
-        <option value="liverpool">Liverpool Airport</option>
-        <option value="east-midlands">East Midlands Airport</option>
-        <option value="stansted">Stansted Airport</option>
-        <option value="luton">Luton Airport</option>
-        <option value="anglesey">Anglesey Airport</option>
-      </select>
-    </label>
-
-    <label for="vehicle">Select Vehicle Type
-      <select name="vehicle" id="vehicle" required>
-        <option value="">--Choose Vehicle--</option>
-        <option value="standard">Standard 4-Seater</option>
-        <option value="disabled">Disabled Access Vehicle</option>
-        <option value="minibus">Minibus (up to 8 passengers)</option>
-      </select>
-    </label>
-
-    <label for="date">Pickup Date & Time
-      <input type="datetime-local" name="date" id="date" required>
-    </label>
-
-    <label for="requirements">Special Requirements
-      <textarea name="requirements" id="requirements" rows="4" placeholder="Any additional information..."></textarea>
-    </label>
-
-    <button type="submit" id="submitBtn">Get Quote & Book</button>
-    <div class="success-message" id="successMessage">
-      ✅ Thank you! Your booking request has been submitted. We will contact you shortly.
-    </div>
-  </form>
+<form id="taxiForm">
+  <label for="name">Full Name<input type="text" id="name" required placeholder="John Doe"></label>
+  <label for="phone">Phone Number<input type="tel" id="phone" required placeholder="01234 567890"></label>
+  <label for="postcode">Pickup Postcode<input type="text" id="postcode" required placeholder="SA18 3XX"></label>
+  <label for="airport">Select Airport
+    <select id="airport" required>
+      <option value="">--Choose Airport--</option>
+      <option value="cardiff">Cardiff Airport</option>
+      <option value="bristol">Bristol Airport</option>
+      <option value="heathrow">Heathrow Airport</option>
+      <option value="gatwick">Gatwick Airport</option>
+      <option value="birmingham">Birmingham Airport</option>
+      <option value="manchester">Manchester Airport</option>
+      <option value="liverpool">Liverpool Airport</option>
+      <option value="east-midlands">East Midlands Airport</option>
+      <option value="stansted">Stansted Airport</option>
+      <option value="luton">Luton Airport</option>
+      <option value="anglesey">Anglesey Airport</option>
+    </select>
+  </label>
+  <label for="vehicle">Select Vehicle Type
+    <select id="vehicle" required>
+      <option value="">--Choose Vehicle--</option>
+      <option value="standard">Standard 4-Seater (£20)</option>
+      <option value="disabled">Disabled Vehicle (£25)</option>
+      <option value="minibus">Minibus (up to 8) (£35)</option>
+    </select>
+  </label>
+  <label for="date">Pickup Date & Time<input type="datetime-local" id="date" required></label>
+  <label for="requirements">Special Requirements<textarea id="requirements" rows="4" placeholder="Any additional info..."></textarea></label>
+  <p>Total Fare: £<span id="fare">0</span></p>
+  <button type="submit" id="payBtn">Pay & Book</button>
+  <div class="success-message" id="successMessage">✅ Booking successful!</div>
+</form>
 </div>
 
 <footer>
-  <p>Licensed Private Hire Taxi Service | Serving Ammanford, Neath & Surrounding Areas</p>
+<p>Licensed Private Hire Taxi Service | Serving Ammanford, Neath & Surrounding Areas</p>
 </footer>
 
+<script src="https://js.stripe.com/v3/"></script>
 <script>
-// Handle form submission with AJAX and loading button
-document.getElementById('taxiForm').addEventListener('submit', function(event){
-    event.preventDefault();
-    const form = event.target;
-    const submitBtn = document.getElementById('submitBtn');
+const stripe = Stripe('pk_test_YOUR_STRIPE_PUBLIC_KEY'); // Replace with your Stripe public key
 
-    // Show loading text
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
+const taxiForm = document.getElementById('taxiForm');
+const vehicleSelect = document.getElementById('vehicle');
+const dateInput = document.getElementById('date');
+const fareDisplay = document.getElementById('fare');
 
-    fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            form.reset();
-            document.getElementById('successMessage').style.display = 'block';
-        } else {
-            alert('Oops! There was a problem submitting your form.');
-        }
-    }).catch(error => {
-        alert('Oops! There was a problem submitting your form.');
-        console.error(error);
-    }).finally(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    });
+function calculateFare() {
+  let fare = 0;
+  const vehicle = vehicleSelect.value;
+  if(vehicle==='standard') fare=20;
+  else if(vehicle==='disabled') fare=25;
+  else if(vehicle==='minibus') fare=35;
+
+  // Short notice fee if within 6 hours
+  const pickupTime = new Date(dateInput.value);
+  const now = new Date();
+  if((pickupTime - now)/3600000 < 6) fare += 10;
+
+  fareDisplay.textContent = fare;
+  return fare;
+}
+
+vehicleSelect.addEventListener('change', calculateFare);
+dateInput.addEventListener('change', calculateFare);
+
+taxiForm.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const fare = calculateFare() * 100; // in pence for Stripe
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const postcode = document.getElementById('postcode').value;
+  const airport = document.getElementById('airport').value;
+  const vehicle = vehicleSelect.value;
+  const date = dateInput.value;
+  const requirements = document.getElementById('requirements').value;
+
+  // Create Stripe Checkout session via server
+  const response = await fetch('/create-checkout-session', {
+    method: 'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ fare, name, phone, postcode, airport, vehicle, date, requirements })
+  });
+  const session = await response.json();
+  stripe.redirectToCheckout({ sessionId: session.id });
 });
 </script>
 
