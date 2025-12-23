@@ -22,7 +22,8 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Birmingham Airport Transfer"
+          "name": "Birmingham Airport Transfer",
+          "description": "Pre-booked private hire taxi from Ammanford & Neath to Birmingham Airport with disabled access vehicles and small minibus."
         }
       }
     ]
@@ -31,57 +32,89 @@
 </script>
 
 <style>
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  background: #f5f7fa;
-  color: #222;
-  line-height: 1.6;
-  padding: 20px;
+:root {
+  --primary: #0b3c5d;
+  --accent: #1faa59;
+  --light: #f5f7fa;
+  --dark: #222;
 }
-header { background: #0b3c5d; color: #fff; text-align: center; padding: 40px 20px; border-radius: 12px; }
-header h1 { margin: 0; font-size: 28px; }
-section { background: #fff; padding: 25px; border-radius: 12px; margin-top: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
-h2 { color: #0b3c5d; }
-ul { padding-left: 20px; }
-a { color: #1faa59; text-decoration: none; font-weight: bold; }
-a:hover { text-decoration: underline; }
+
+* { box-sizing: border-box; }
+body { margin:0; font-family:"Segoe UI", Arial, sans-serif; background: var(--light); color: var(--dark); line-height:1.6; padding:20px; }
+
+/* HEADER */
+header { background: linear-gradient(135deg, #0b3c5d, #092c44); color:#fff; text-align:center; padding:50px 20px; border-radius:12px; }
+header h1 { font-size:32px; margin:0; }
+header p { font-size:18px; opacity:0.9; }
+
+/* CONTAINER */
+.container { max-width:1100px; margin:auto; padding:30px 20px; }
+
+/* HERO CTA */
+.hero { background:#fff; border-radius:12px; padding:40px 25px; margin-top:-60px; box-shadow:0 15px 40px rgba(0,0,0,0.1); text-align:center; }
+.hero h2 { font-size:28px; margin-bottom:10px; color: var(--primary); }
+.hero p { font-size:16px; margin-bottom:25px; }
+.hero a { display:inline-block; background: var(--accent); color:#fff; padding:16px 34px; font-size:18px; font-weight:bold; text-decoration:none; border-radius:30px; transition: background 0.3s ease; }
+.hero a:hover { background:#178f4b; }
+.phone { margin-top:15px; font-size:20px; font-weight:bold; }
+
+/* SECTIONS */
+section { background:#fff; border-radius:12px; padding:25px; margin-top:20px; box-shadow:0 10px 25px rgba(0,0,0,0.05); }
+h2 { color: var(--primary); margin-top:0; }
+ul { padding-left:20px; }
+li { margin-bottom:10px; }
+a { color: var(--accent); text-decoration:none; font-weight:bold; }
+a:hover { text-decoration:underline; }
+
+@media (max-width:600px) {
+  header h1 { font-size:28px; }
+  .hero h2 { font-size:24px; }
+}
 </style>
 </head>
+
 <body>
 
 <header>
   <h1>Ammanford & Neath to Birmingham Airport Private Hire</h1>
+  <p>Pre-booked airport transfers with disabled access & minibus options</p>
 </header>
 
-<section>
-  <p>Looking for a reliable <strong>private hire vehicle from Ammanford & Neath to Birmingham Airport</strong>? Our service offers pre-booked airport transfers using our <strong>disabled access vehicles and small minibus</strong> fleet. Perfect for families, business travelers, or early morning flights.</p>
-</section>
+<div class="container">
 
-<section>
-  <h2>Local Airport Transfers From Ammanford & Neath</h2>
-  <p>Our service is based in Ammanford and Neath and designed for customers travelling to Birmingham Airport. This is <strong>not a nationwide taxi service</strong> — we specialise in local airport transfers across Carmarthenshire and surrounding South West Wales villages.</p>
-</section>
+  <section class="hero">
+    <h2>Book Your Private Hire Taxi</h2>
+    <p>Instant online booking • Fixed airport prices • Disabled access & minibus available</p>
+    <a href="/book-now">Book Online Now</a>
+    <div class="phone">Or call: 01269 XXX XXX</div>
+  </section>
 
-<section>
-  <h2>Why Book Your Birmingham Airport Transfer With Us?</h2>
-  <ul>
-    <li>Pre-booked private hire only (no rank taxis)</li>
-    <li>Disabled access vehicles and small minibus available</li>
-    <li>Fixed airport prices, no hidden fees</li>
-    <li>Reliable for early flights and time-sensitive trips</li>
-    <li>Service from Ammanford, Neath and surrounding villages</li>
-  </ul>
-</section>
+  <section>
+    <h2>Local Airport Transfers From Ammanford & Neath</h2>
+    <p>We operate from Ammanford and Neath, providing pre-booked transfers to Birmingham Airport. This is <strong>not a nationwide taxi service</strong> — our focus is on Carmarthenshire and nearby South West Wales villages.</p>
+  </section>
 
-<section>
-  <h2>Areas We Collect From</h2>
-  <p>Ammanford • Neath • Cross Hands • Llandybie • Glanaman • Brynamman • Tycroes • Saron</p>
-</section>
+  <section>
+    <h2>Why Book Your Birmingham Airport Transfer With Us?</h2>
+    <ul>
+      <li>Pre-booked private hire only (no rank taxis)</li>
+      <li>Disabled access vehicles and small minibus available</li>
+      <li>Fixed airport prices, no hidden fees</li>
+      <li>Reliable for early flights and time-sensitive trips</li>
+      <li>Serving Ammanford, Neath, and surrounding villages</li>
+    </ul>
+  </section>
 
-<section>
-  <p><a href="/book-now">Book your Ammanford & Neath to Birmingham Airport private hire online now</a></p>
-</section>
+  <section>
+    <h2>Areas We Collect From</h2>
+    <p>Ammanford • Neath • Cross Hands • Llandybie • Glanaman • Brynamman • Tycroes • Saron</p>
+  </section>
+
+  <section>
+    <p><a href="/book-now">Book your Ammanford & Neath to Birmingham Airport private hire online now</a></p>
+  </section>
+
+</div>
 
 </body>
 </html>
