@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book Your Taxi | Ammanford & Neath Private Hire</title>
 <meta name="description" content="Book your Ammanford & Neath private hire taxi online. Pre-booked airport transfers with disabled access and minibus options.">
+
 <style>
 :root {
   --primary: #0b3c5d;
@@ -17,25 +18,69 @@
 body { margin:0; font-family:"Segoe UI", Arial, sans-serif; background: var(--light); color: var(--dark); line-height:1.6; }
 
 /* HEADER */
-header { background: linear-gradient(135deg, #0b3c5d, #092c44); color:#fff; padding:50px 20px; text-align:center; }
+header { 
+  background: linear-gradient(135deg, #0b3c5d, #092c44); 
+  color:#fff; 
+  padding:50px 20px; 
+  text-align:center; 
+  border-radius:0 0 20px 20px;
+}
 header h1 { font-size:34px; margin-bottom:10px; }
 header p { font-size:18px; opacity:0.9; }
 
 /* CONTAINER */
-.container { max-width:700px; margin:auto; padding:30px 20px; background:#fff; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.05); margin-top:-40px; }
+.container { 
+  max-width:700px; 
+  margin:auto; 
+  padding:40px 30px; 
+  background:#fff; 
+  border-radius:12px; 
+  box-shadow:0 10px 25px rgba(0,0,0,0.08); 
+  margin-top:-40px; 
+}
 
 /* FORM */
-form { display:flex; flex-direction:column; gap:15px; }
-label { font-weight:bold; }
-input, select, textarea { padding:12px; border-radius:6px; border:1px solid #ccc; font-size:16px; width:100%; }
-button { background: var(--accent); color:#fff; padding:15px; font-size:18px; font-weight:bold; border:none; border-radius:30px; cursor:pointer; transition:background 0.3s ease; }
-button:hover { background:#178f4b; }
+form { display:flex; flex-direction:column; gap:20px; }
+label { font-weight:bold; display:flex; flex-direction:column; font-size:16px; }
+input, select, textarea { 
+  padding:12px; 
+  border-radius:6px; 
+  border:1px solid #ccc; 
+  font-size:16px; 
+  width:100%; 
+  margin-top:5px;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--accent); outline:none; box-shadow:0 0 5px rgba(31,170,89,0.3); }
+button { 
+  background: var(--accent); 
+  color:#fff; 
+  padding:15px; 
+  font-size:18px; 
+  font-weight:bold; 
+  border:none; 
+  border-radius:30px; 
+  cursor:pointer; 
+  transition:background 0.3s ease, transform 0.2s ease; 
+}
+button:hover { 
+  background:#178f4b; 
+  transform: translateY(-2px);
+}
 
 /* FOOTER */
-footer { background: var(--primary); color:#fff; text-align:center; padding:20px; margin-top:60px; font-size:14px; }
+footer { 
+  background: var(--primary); 
+  color:#fff; 
+  text-align:center; 
+  padding:20px; 
+  margin-top:60px; 
+  font-size:14px; 
+  border-radius:12px 12px 0 0;
+}
 
 @media (max-width:600px) {
   header h1 { font-size:28px; }
+  .container { padding:30px 20px; }
 }
 </style>
 </head>
@@ -47,45 +92,52 @@ footer { background: var(--primary); color:#fff; text-align:center; padding:20px
 </header>
 
 <div class="container">
-  <form action="https://formspree.io/f/your-form-id" method="POST">
-    <label for="name">Full Name</label>
-    <input type="text" name="name" id="name" required>
+  <form action="https://formspree.io/f/mjgbpzjj" method="POST">
+    <label for="name">Full Name
+      <input type="text" name="name" id="name" required placeholder="John Doe">
+    </label>
 
-    <label for="phone">Phone Number</label>
-    <input type="tel" name="phone" id="phone" required>
+    <label for="phone">Phone Number
+      <input type="tel" name="phone" id="phone" required placeholder="01234 567890">
+    </label>
 
-    <label for="postcode">Pickup Postcode</label>
-    <input type="text" name="postcode" id="postcode" required>
+    <label for="postcode">Pickup Postcode
+      <input type="text" name="postcode" id="postcode" required placeholder="SA18 3XX">
+    </label>
 
-    <label for="airport">Select Airport</label>
-    <select name="airport" id="airport" required>
-      <option value="">--Choose Airport--</option>
-      <option value="cardiff">Cardiff Airport</option>
-      <option value="bristol">Bristol Airport</option>
-      <option value="heathrow">Heathrow Airport</option>
-      <option value="gatwick">Gatwick Airport</option>
-      <option value="birmingham">Birmingham Airport</option>
-      <option value="manchester">Manchester Airport</option>
-      <option value="liverpool">Liverpool Airport</option>
-      <option value="east-midlands">East Midlands Airport</option>
-      <option value="stansted">Stansted Airport</option>
-      <option value="luton">Luton Airport</option>
-      <option value="anglesey">Anglesey Airport</option>
-    </select>
+    <label for="airport">Select Airport
+      <select name="airport" id="airport" required>
+        <option value="">--Choose Airport--</option>
+        <option value="cardiff">Cardiff Airport</option>
+        <option value="bristol">Bristol Airport</option>
+        <option value="heathrow">Heathrow Airport</option>
+        <option value="gatwick">Gatwick Airport</option>
+        <option value="birmingham">Birmingham Airport</option>
+        <option value="manchester">Manchester Airport</option>
+        <option value="liverpool">Liverpool Airport</option>
+        <option value="east-midlands">East Midlands Airport</option>
+        <option value="stansted">Stansted Airport</option>
+        <option value="luton">Luton Airport</option>
+        <option value="anglesey">Anglesey Airport</option>
+      </select>
+    </label>
 
-    <label for="vehicle">Select Vehicle Type</label>
-    <select name="vehicle" id="vehicle" required>
-      <option value="">--Choose Vehicle--</option>
-      <option value="standard">Standard 4-Seater</option>
-      <option value="disabled">Disabled Access Vehicle</option>
-      <option value="minibus">Minibus (up to 8 passengers)</option>
-    </select>
+    <label for="vehicle">Select Vehicle Type
+      <select name="vehicle" id="vehicle" required>
+        <option value="">--Choose Vehicle--</option>
+        <option value="standard">Standard 4-Seater</option>
+        <option value="disabled">Disabled Access Vehicle</option>
+        <option value="minibus">Minibus (up to 8 passengers)</option>
+      </select>
+    </label>
 
-    <label for="date">Pickup Date & Time</label>
-    <input type="datetime-local" name="date" id="date" required>
+    <label for="date">Pickup Date & Time
+      <input type="datetime-local" name="date" id="date" required>
+    </label>
 
-    <label for="requirements">Special Requirements</label>
-    <textarea name="requirements" id="requirements" rows="4" placeholder="Any additional information..."></textarea>
+    <label for="requirements">Special Requirements
+      <textarea name="requirements" id="requirements" rows="4" placeholder="Any additional information..."></textarea>
+    </label>
 
     <button type="submit">Get Quote & Book</button>
   </form>
