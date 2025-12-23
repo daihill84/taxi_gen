@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neath Private Hire Taxi | Local & Airport Transfers</title>
-<meta name="description" content="Private hire taxi from Neath to nearby towns and airports. Fixed prices, pre-booked transfers. Book online 24/7.">
+<title>Neath & Surrounding Areas | Ammanford & Neath Private Hire</title>
+<meta name="description" content="Reliable private hire taxi service in Neath and surrounding areas. Pre-booked transfers to airports, schools, and local destinations. Fixed prices, online booking 24/7.">
 <link rel="canonical" href="https://yourdomain.co.uk/neath-area.html">
 
 <!-- SCHEMA -->
@@ -13,82 +13,136 @@
   "@context": "https://schema.org",
   "@type": "TaxiService",
   "name": "Ammanford & Neath Private Hire",
-  "areaServed": ["Neath", "Skewen", "Briton Ferry", "Cadoxton", "Seven Sisters", "Pontardawe", "Baglan"],
-  "description": "Private hire taxi service for Neath and surrounding towns. Airport transfers and local journeys."
+  "areaServed": ["Neath", "Neath Abbey", "Pontardawe", "Skewen", "Sandfields", "Briton Ferry"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Neath",
+    "postalCode": "SA10",
+    "addressCountry": "GB"
+  }
 }
 </script>
 
 <style>
-body { font-family:"Segoe UI", Arial, sans-serif; margin:0; background:#f5f7fa; color:#222; line-height:1.6; }
+:root {
+  --primary: #0b3c5d;
+  --accent: #1faa59;
+  --light: #f5f7fa;
+  --dark: #222;
+}
+
+* { box-sizing: border-box; }
+body { margin:0; font-family:"Segoe UI", Arial, sans-serif; background: var(--light); color: var(--dark); line-height:1.6; }
+
 header { background: linear-gradient(135deg, #0b3c5d, #092c44); color:#fff; padding:50px 20px; text-align:center; border-radius:12px; }
-header h1 { font-size:32px; margin:0 0 10px 0; }
-header p { font-size:16px; opacity:0.9; }
-.container { max-width:900px; margin:auto; padding:30px 20px; }
-section { background:#fff; padding:25px; margin-top:20px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); }
-h2 { color:#0b3c5d; margin-top:0; }
-ul { padding-left:20px; }
-li { margin-bottom:10px; }
-a { color:#1faa59; text-decoration:none; font-weight:bold; }
+header h1 { font-size:34px; margin-bottom:10px; }
+header p { font-size:18px; opacity:0.9; }
+
+.container { max-width:1100px; margin:auto; padding:30px 20px; }
+
+.hero { background:#fff; border-radius:12px; padding:40px 25px; margin-top:-60px; box-shadow:0 15px 40px rgba(0,0,0,0.1); text-align:center; }
+.hero h2 { font-size:28px; margin-bottom:10px; color: var(--primary); }
+.hero p { font-size:16px; margin-bottom:25px; }
+.hero a { display:inline-block; background: var(--accent); color:#fff; padding:16px 34px; font-size:18px; font-weight:bold; text-decoration:none; border-radius:30px; transition: background 0.3s ease; }
+.hero a:hover { background:#178f4b; }
+.phone { margin-top:15px; font-size:20px; font-weight:bold; }
+
+.features { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:25px; margin-top:60px; }
+.feature { background:#fff; border-radius:12px; padding:30px 25px; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+.feature:hover { transform:translateY(-5px); }
+.feature h3 { margin-top:0; color: var(--primary); }
+
+.areas { background:#fff; border-radius:12px; padding:30px 25px; margin-top:50px; box-shadow:0 10px 25px rgba(0,0,0,0.05); }
+.areas h3 { color: var(--primary); }
+
+footer { background: var(--primary); color:#fff; text-align:center; padding:20px; margin-top:60px; font-size:14px; }
+footer a { color: #fff; text-decoration:underline; margin:0 8px; font-weight:normal; }
+
+a { color: var(--accent); text-decoration:none; font-weight:bold; }
 a:hover { text-decoration:underline; }
-footer { background:#0b3c5d; color:#fff; text-align:center; padding:20px; margin-top:60px; font-size:14px; }
+
+@media (max-width:600px) {
+  header h1 { font-size:28px; }
+  .hero h2 { font-size:24px; }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Neath Private Hire Taxi</h1>
-  <p>Local & Airport Transfers – Serving Neath & Surrounding Towns</p>
+  <h1>Neath & Surrounding Areas Private Hire</h1>
+  <p>Reliable local taxis & pre-booked airport transfers – 24/7</p>
 </header>
 
 <div class="container">
 
-<section>
-  <h2>Areas We Cover Around Neath</h2>
-  <p>We provide pre-booked private hire services to and from the following towns and villages near Neath:</p>
-  <ul>
-    <li>Skewen</li>
-    <li>Briton Ferry</li>
-    <li>Cadoxton</li>
-    <li>Seven Sisters</li>
-    <li>Pontardawe</li>
-    <li>Baglan</li>
-  </ul>
-</section>
+  <section class="hero">
+    <h2>Book Your Neath Taxi</h2>
+    <p>Fixed-price local and airport transfers • Disabled access & minibus available</p>
+    <a href="book-now.html">Book Online Now</a>
+    <div class="phone">Or call: 01639 XXX XXX</div>
+  </section>
 
-<section>
-  <h2>Airport Transfers from Neath</h2>
-  <p>We offer fixed-price transfers to major UK airports, including:</p>
-  <ul>
-    <li>Cardiff Airport</li>
-    <li>Bristol Airport</li>
-    <li>Heathrow Airport</li>
-    <li>Gatwick Airport</li>
-    <li>Birmingham Airport</li>
-    <li>Manchester Airport</li>
-    <li>Liverpool Airport</li>
-    <li>East Midlands Airport</li>
-    <li>Stansted Airport</li>
-    <li>Luton Airport</li>
-    <li>Anglesey Airport</li>
-  </ul>
-</section>
+  <section class="features">
+    <div class="feature">
+      <h3>📍 Areas Covered Around Neath</h3>
+      <p>
+        We provide reliable private hire from Neath and surrounding villages with postcodes and local landmarks:
+        <strong>Neath:</strong> SA10, SA11 – Neath Abbey, Victoria Gardens, Neath Railway Station<br>
+        <strong>Pontardawe:</strong> SA8 – Pontardawe Leisure Centre, Pontardawe Library<br>
+        <strong>Skewen:</strong> SA10 – Skewen Park, Skewen Railway Station<br>
+        <strong>Sandfields:</strong> SA11 – Sandfields Comprehensive School, Baglan Road<br>
+        <strong>Briton Ferry:</strong> SA11 – Briton Ferry Bridge, Briton Ferry High Street
+      </p>
+    </div>
 
-<section>
-  <h2>Why Choose Us?</h2>
-  <ul>
-    <li>Based in Neath – fast local response</li>
-    <li>Pre-booked private hire only</li>
-    <li>Disabled access vehicles & small minibus</li>
-    <li>Reliable for early flights and appointments</li>
-  </ul>
-  <p><a href="book-now.html">Book your Neath taxi online now</a></p>
-</section>
+    <div class="feature">
+      <h3>✈ Airport Transfers</h3>
+      <p>
+        Pre-booked transfers from Neath to:
+        <a href="airport-transfers/cardiff-airport.html">Cardiff Airport</a>,
+        <a href="airport-transfers/bristol-airport.html">Bristol Airport</a>,
+        <a href="airport-transfers/heathrow-airport.html">Heathrow Airport</a>,
+        <a href="airport-transfers/gatwick-airport.html">Gatwick Airport</a>,
+        <a href="airport-transfers/birmingham-airport.html">Birmingham Airport</a>,
+        <a href="airport-transfers/manchester-airport.html">Manchester Airport</a>.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>🚖 Private Hire & Specialist Vehicles</h3>
+      <p>
+        Suitable for schools, small groups, and disabled passengers. Fleet includes 4-seaters, small minibuses (up to 8 passengers), and disabled-access vehicles.
+      </p>
+    </div>
+
+    <div class="feature">
+      <h3>📲 Book Online 24/7</h3>
+      <p>
+        Select your pickup postcode, airport or local destination, vehicle type, and date/time for instant confirmation.
+      </p>
+    </div>
+  </section>
+
+  <section class="areas">
+    <h3>Neighbourhoods & Villages</h3>
+    <p>
+      Neath (SA10, SA11) • Neath Abbey • Pontardawe (SA8) • Skewen (SA10) • Sandfields (SA11) • Briton Ferry (SA11)
+    </p>
+    <p>
+      Serving local schools, businesses, and airport transfers across Neath Port Talbot.
+    </p>
+  </section>
 
 </div>
 
 <footer>
-  <p>Licensed Private Hire Taxi Service | Serving Neath & Surrounding Towns</p>
+  <p>Licensed Private Hire Taxi Service | Serving Neath & Surrounding Areas</p>
+  <p>Other Local Pages: 
+    <a href="ammanford-area.html">Ammanford Area</a> | 
+    <a href="airport-transfers.html">Airport Transfers</a>
+  </p>
 </footer>
 
 </body>
