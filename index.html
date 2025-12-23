@@ -3,23 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ammanford & Neath Private Hire | Airport & Specialist Taxi Service</title>
-<meta name="description" content="Reliable pre-booked private hire taxis from Ammanford & Neath. Fixed-price airport transfers with disabled access and minibuses. Book online 24/7.">
+
+<title>Ammanford & Neath Private Hire Taxi | Airport & Local Transfers</title>
+
+<meta name="description" content="Reliable pre-booked private hire taxis from Ammanford & Neath. Airport transfers, local journeys, disabled access and minibuses. Book online 24/7.">
+
 <link rel="canonical" href="https://yourdomain.co.uk/">
 
-<!-- SCHEMA -->
+<!-- LOCAL BUSINESS SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TaxiService",
   "name": "Ammanford & Neath Private Hire",
-  "areaServed": ["Ammanford", "Neath", "Cross Hands", "Llandybie", "Carmarthenshire", "Neath Port Talbot"],
+  "areaServed": [
+    "Ammanford",
+    "Neath",
+    "Cross Hands",
+    "Llandybie",
+    "Glanaman",
+    "Brynamman",
+    "Skewen",
+    "Briton Ferry"
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Ammanford",
     "postalCode": "SA18",
     "addressCountry": "GB"
-  }
+  },
+  "serviceType": "Pre-booked Private Hire Taxi Service"
 }
 </script>
 
@@ -32,40 +45,94 @@
 }
 
 * { box-sizing: border-box; }
-body { margin:0; font-family:"Segoe UI", Arial, sans-serif; background: var(--light); color: var(--dark); line-height:1.6; }
+body {
+  margin:0;
+  font-family:"Segoe UI", Arial, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height:1.6;
+}
 
 /* HEADER */
-header { background: linear-gradient(135deg, #0b3c5d, #092c44); color:#fff; padding:50px 20px; text-align:center; border-radius:12px; }
+header {
+  background: linear-gradient(135deg, #0b3c5d, #092c44);
+  color:#fff;
+  padding:50px 20px;
+  text-align:center;
+}
 header h1 { font-size:34px; margin-bottom:10px; }
 header p { font-size:18px; opacity:0.9; }
 
 /* CONTAINER */
 .container { max-width:1100px; margin:auto; padding:30px 20px; }
 
-/* HERO CTA */
-.hero { background:#fff; border-radius:12px; padding:40px 25px; margin-top:-60px; box-shadow:0 15px 40px rgba(0,0,0,0.1); text-align:center; }
-.hero h2 { font-size:28px; margin-bottom:10px; color: var(--primary); }
-.hero p { font-size:16px; margin-bottom:25px; }
-.hero a { display:inline-block; background: var(--accent); color:#fff; padding:16px 34px; font-size:18px; font-weight:bold; text-decoration:none; border-radius:30px; transition: background 0.3s ease; }
+/* HERO */
+.hero {
+  background:#fff;
+  border-radius:12px;
+  padding:40px 25px;
+  margin-top:-60px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.1);
+  text-align:center;
+}
+.hero h2 { font-size:28px; color: var(--primary); }
+.hero p { margin-bottom:25px; }
+.hero a {
+  display:inline-block;
+  background: var(--accent);
+  color:#fff;
+  padding:16px 34px;
+  font-size:18px;
+  font-weight:bold;
+  text-decoration:none;
+  border-radius:30px;
+}
 .hero a:hover { background:#178f4b; }
 .phone { margin-top:15px; font-size:20px; font-weight:bold; }
 
 /* FEATURES */
-.features { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:25px; margin-top:60px; }
-.feature { background:#fff; border-radius:12px; padding:30px 25px; box-shadow:0 10px 25px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
-.feature:hover { transform:translateY(-5px); }
+.features {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:25px;
+  margin-top:60px;
+}
+.feature {
+  background:#fff;
+  border-radius:12px;
+  padding:30px 25px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
 .feature h3 { margin-top:0; color: var(--primary); }
 
 /* AREAS */
-.areas { background:#fff; border-radius:12px; padding:30px 25px; margin-top:50px; box-shadow:0 10px 25px rgba(0,0,0,0.05); }
+.areas {
+  background:#fff;
+  border-radius:12px;
+  padding:30px 25px;
+  margin-top:50px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
 .areas h3 { color: var(--primary); }
 
-/* FOOTER */
-footer { background: var(--primary); color:#fff; text-align:center; padding:20px; margin-top:60px; font-size:14px; }
-footer a { color: #fff; text-decoration:underline; margin:0 8px; font-weight:normal; }
-
-a { color: var(--accent); text-decoration:none; font-weight:bold; }
+a { color: var(--accent); font-weight:bold; text-decoration:none; }
 a:hover { text-decoration:underline; }
+
+/* FOOTER */
+footer {
+  background: var(--primary);
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  margin-top:60px;
+  font-size:14px;
+}
+footer a {
+  color:#fff;
+  text-decoration:underline;
+  margin:0 8px;
+  font-weight:normal;
+}
 
 @media (max-width:600px) {
   header h1 { font-size:28px; }
@@ -77,84 +144,81 @@ a:hover { text-decoration:underline; }
 <body>
 
 <header>
-  <h1>Ammanford & Neath Private Hire</h1>
-  <p>Pre-booked airport transfers & specialist transport – 24/7</p>
+  <h1>Ammanford & Neath Private Hire Taxi</h1>
+  <p>Pre-booked local journeys, airport transfers & specialist transport – 24/7</p>
 </header>
 
 <div class="container">
 
   <section class="hero">
     <h2>Book Your Private Hire Taxi</h2>
-    <p>Instant online booking • Fixed airport prices • Disabled access & minibus available</p>
+    <p>Fixed airport prices • Local drivers • Disabled access & minibus available</p>
     <a href="book-now.html">Book Online Now</a>
-    <div class="phone">Or call: 01269 XXX XXX</div>
+    <div class="phone">Call: 01269 XXX XXX</div>
   </section>
 
   <section class="features">
+
     <div class="feature">
       <h3>✈ Airport Transfers</h3>
       <p>
-        Pre-booked transfers from Ammanford & Neath to:
-        <a href="airport-transfers/cardiff-airport.html">Cardiff Airport</a>,
-        <a href="airport-transfers/bristol-airport.html">Bristol Airport</a>,
-        <a href="airport-transfers/heathrow-airport.html">Heathrow Airport</a>,
-        <a href="airport-transfers/gatwick-airport.html">Gatwick Airport</a>,
-        <a href="airport-transfers/birmingham-airport.html">Birmingham Airport</a>,
-        <a href="airport-transfers/manchester-airport.html">Manchester Airport</a>,
-        <a href="airport-transfers/liverpool-airport.html">Liverpool Airport</a>,
-        <a href="airport-transfers/east-midlands-airport.html">East Midlands Airport</a>,
-        <a href="airport-transfers/stansted-airport.html">Stansted Airport</a>,
-        <a href="airport-transfers/luton-airport.html">Luton Airport</a>,
-        <a href="airport-transfers/anglesey-airport.html">Anglesey Airport</a>.
+        Pre-booked airport transfers from Ammanford (SA18) and Neath (SA10 / SA11) to:
+        <a href="airport-transfers/cardiff-airport.html">Cardiff</a>,
+        <a href="airport-transfers/bristol-airport.html">Bristol</a>,
+        <a href="airport-transfers/heathrow-airport.html">Heathrow</a>,
+        <a href="airport-transfers/gatwick-airport.html">Gatwick</a>,
+        <a href="airport-transfers/birmingham-airport.html">Birmingham</a>,
+        <a href="airport-transfers/manchester-airport.html">Manchester</a> and more.
       </p>
-      <p>Specialist vehicles for disabled passengers & small groups. Service is pre-booked only from Ammanford & Neath.</p>
+      <p>Pre-booked service only • Ideal for early flights.</p>
     </div>
 
     <div class="feature">
-      <h3>🚖 Private Hire & Specialist Vehicles</h3>
+      <h3>🚖 Local & Specialist Transport</h3>
       <p>
-        Reliable transport for schools, disabled passengers, and small groups.
-        Our fleet includes 4-seaters, a small minibus (up to 8 passengers), and disabled-access vehicles.
+        Local private hire for schools, disabled passengers, appointments and small groups.
+        Vehicles include standard cars, disabled-access vehicles and an 8-seat minibus.
       </p>
     </div>
 
     <div class="feature">
-      <h3>📍 Local Services & Landmarks</h3>
+      <h3>📍 Local Areas, Postcodes & Landmarks</h3>
       <p>
-        We cover hyper-local areas with postcodes and landmarks for easy Google ranking:
-        <strong>Ammanford:</strong> SA18 1AA, SA18 2BB – Town Centre, Tirydail, Amman Valley Primary School<br>
-        <strong>Neath:</strong> SA10 7AA, SA11 3BB – Neath Abbey, Victoria Gardens, Pontardawe Road<br>
-        <a href="ammanford-area.html">More on Ammanford</a> |
-        <a href="neath-area.html">More on Neath</a>
+        <strong>Ammanford (SA18):</strong> Town Centre, Tirydail, Ammanford Train Station<br>
+        <strong>Neath (SA10 / SA11):</strong> Neath Town Centre, Neath Abbey, Victoria Gardens<br>
+        <a href="ammanford-area.html">Ammanford Area</a> |
+        <a href="neath-area.html">Neath Area</a> |
+        <a href="local-areas.html">All Areas We Cover</a>
       </p>
     </div>
 
     <div class="feature">
       <h3>📲 Book Online 24/7</h3>
       <p>
-        Reserve your taxi quickly with our online form.
-        Select pickup postcode, airport, vehicle type, and date/time for instant confirmation.
+        Quick online booking for airport transfers and local journeys.
+        Choose your pickup postcode, destination, vehicle type and date/time.
       </p>
     </div>
+
   </section>
 
   <section class="areas">
-    <h3>Areas We Cover</h3>
+    <h3>Primary Service Areas</h3>
     <p>
-      Ammanford (SA18) • Neath (SA10, SA11) • Cross Hands • Llandybie • Glanaman • Brynamman • Tycroes • Saron
+      Ammanford (SA18) • Neath (SA10, SA11) • Cross Hands • Llandybie • Glanaman • Brynamman • Skewen • Briton Ferry
     </p>
     <p>
-      Airport transfers across Carmarthenshire & Neath Port Talbot. Major landmarks included for easier local SEO.
+      Serving Carmarthenshire & Neath Port Talbot with reliable pre-booked private hire taxis.
     </p>
   </section>
 
 </div>
 
 <footer>
-  <p>Licensed Private Hire Taxi Service | Serving Ammanford, Neath & Surrounding Areas</p>
-  <p>Local Pages: 
-    <a href="ammanford-area.html">Ammanford Area</a> | 
-    <a href="neath-area.html">Neath Area</a>
+  <p>Licensed Private Hire Taxi Service | Ammanford & Neath</p>
+  <p>
+    <a href="local-areas.html">Areas We Cover</a> |
+    <a href="book-now.html">Book Online</a>
   </p>
 </footer>
 
