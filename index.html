@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Ammanford & Neath Private Hire | Airport & Specialist Taxi Service</title>
 <meta name="description" content="Reliable pre-booked private hire taxis from Ammanford & Neath. Fixed-price airport transfers with disabled access and minibuses. Book online 24/7.">
+<link rel="canonical" href="https://yourdomain.co.uk/">
 
 <!-- SCHEMA -->
 <script type="application/ld+json">
@@ -13,7 +13,7 @@
   "@context": "https://schema.org",
   "@type": "TaxiService",
   "name": "Ammanford & Neath Private Hire",
-  "areaServed": "Ammanford, Neath, Cross Hands, Llandybie, Carmarthenshire, Neath Port Talbot",
+  "areaServed": ["Ammanford", "Neath", "Cross Hands", "Llandybie", "Carmarthenshire", "Neath Port Talbot"],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Ammanford",
@@ -35,7 +35,7 @@
 body { margin:0; font-family:"Segoe UI", Arial, sans-serif; background: var(--light); color: var(--dark); line-height:1.6; }
 
 /* HEADER */
-header { background: linear-gradient(135deg, #0b3c5d, #092c44); color:#fff; padding:50px 20px; text-align:center; }
+header { background: linear-gradient(135deg, #0b3c5d, #092c44); color:#fff; padding:50px 20px; text-align:center; border-radius:12px; }
 header h1 { font-size:34px; margin-bottom:10px; }
 header p { font-size:18px; opacity:0.9; }
 
@@ -62,6 +62,9 @@ header p { font-size:18px; opacity:0.9; }
 
 /* FOOTER */
 footer { background: var(--primary); color:#fff; text-align:center; padding:20px; margin-top:60px; font-size:14px; }
+
+a { color: var(--accent); text-decoration:none; font-weight:bold; }
+a:hover { text-decoration:underline; }
 
 @media (max-width:600px) {
   header h1 { font-size:28px; }
